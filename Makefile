@@ -98,7 +98,7 @@ endif
 
 install_pcsd:
 ifeq ($(BUILD_GEMS),true)
-	make -C pcsd build_gems
+	setuser hacluster make -C pcsd build_gems
 endif
 	mkdir -p ${DESTDIR}/var/log/pcsd
 ifeq ($(IS_DEBIAN),true)
